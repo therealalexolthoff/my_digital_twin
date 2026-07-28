@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 from typing import Optional
 import uuid
 
-load_dotenv(overried=True)
+load_dotenv(override=True)
 
 app = FastAPI()
 
-origins = os.getenv("CORS_Origins","http://localhost:3000").split(",")
+origins = os.getenv("CORS_ORIGINS","http://localhost:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

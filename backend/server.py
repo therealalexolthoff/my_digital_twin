@@ -28,7 +28,7 @@ app.add_middleware(
 
 bedrock_client = boto3.client(
     service_name="bedrock-runtime",
-    region_name=os.getenv("DEFAULT_AWS_REGION", "us-east-2")
+    region_name=os.getenv("DEFAULT_AWS_REGION", "us-east-1")
 )
 
 BEDROCK_MODEL_ID = os.getenv("BEDROCK_MODEL_ID", "global.amazon.nova-lite-v1:0")
@@ -120,6 +120,7 @@ def call_bedrock(conversation: List[Dict], user_message: str) -> str:
         response = bedrock_client.converse(
             modelId=BEDROCK_MODEL_ID,
             messages=messages,
+            system=[{"text": prompt()}],
             inferenceConfig={
                 "maxTokens": 2000,
                 "temperature": 0.7,

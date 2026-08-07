@@ -40,7 +40,7 @@ export default function Twin() {
         setIsLoading(true);
 
         try {
-            const response = await fetch('https://o722xi6a3d.execute-api.us-east-2.amazonaws.com/chat', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export default function Twin() {
                     <Bot className="w-6 h-6" />
                     AI Digital Twin
                 </h2>
-                <p className="text-sm text-slate-300 mt-1">Your AI course companion</p>
+                <p className="text-sm text-slate-300 mt-1">Alex's AI Doppleganger</p>
             </div>
 
             {/* Messages */}
@@ -105,8 +105,8 @@ export default function Twin() {
                 {messages.length === 0 && (
                     <div className="text-center text-gray-500 mt-8">
                         <Bot className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                        <p>Hello! I&apos;m your Digital Twin.</p>
-                        <p className="text-sm mt-2">Ask me anything about AI deployment!</p>
+                        <p>Hello! I&apos;m Alex's Digital Twin.</p>
+                        <p className="text-sm mt-2">Ask me anything about Alex's Professional Background!</p>
                     </div>
                 )}
 

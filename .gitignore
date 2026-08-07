@@ -20,6 +20,9 @@ build/
 # misc
 .DS_Store
 *.pem
+.vscode/
+.idea/
+*.swp
 
 # debug
 npm-debug.log*
@@ -28,7 +31,23 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.d/
+*.tfvars
+!terraform.tfvars
+!prod.tfvars
+
+# Lambda packages
+lambda-deployment.zip
+lambda-package/
+
+# Environment files
+.env
+.env.*
 !.env.example
 
 # vercel
@@ -41,5 +60,18 @@ next-env.d.ts
 lambda-deployment.zip
 lambda-package/
 
+#Python
 __pycache__/
+*.pyc
 .venv/
+uv.lock
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.d/
+*.tfvars
+!terraform.tfvars
+!prod.tfvars

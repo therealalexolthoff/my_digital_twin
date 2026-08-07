@@ -1,4 +1,4 @@
-# dependencies
+# Node
 node_modules/
 .pnp
 .pnp.*
@@ -7,12 +7,16 @@ node_modules/
 !.yarn/plugins
 !.yarn/versions
 
+#Memory Storage
+memory/
+
 # testing
 coverage/
 
 # next.js
 .next/
 out/
+*/log
 
 # production
 build/
@@ -23,6 +27,7 @@ build/
 .vscode/
 .idea/
 *.swp
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -30,7 +35,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+
 # Terraform
 *.tfstate
 *.tfstate.*
@@ -40,6 +45,8 @@ terraform.tfstate.d/
 *.tfvars
 !terraform.tfvars
 !prod.tfvars
+*.tfvars.secret
+
 
 # Lambda packages
 lambda-deployment.zip
@@ -57,6 +64,7 @@ lambda-package/
 *.tsbuildinfo
 next-env.d.ts
 
+# Lambda
 lambda-deployment.zip
 lambda-package/
 
@@ -64,14 +72,7 @@ lambda-package/
 __pycache__/
 *.pyc
 .venv/
-uv.lock
+venv/
 
-# Terraform
-*.tfstate
-*.tfstate.*
-.terraform/
-.terraform.lock.hcl
-terraform.tfstate.d/
-*.tfvars
-!terraform.tfvars
-!prod.tfvars
+# AWS
+.aws/

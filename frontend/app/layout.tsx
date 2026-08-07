@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Alex's AI Twin",
-  description: "An AI That Speaks for Alex Olthoff",
+  description: "An AI That Speaks Like and For Alex Olthoff",
 };
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ export default function Home() {
              AI Twin Of Alex Olthoff
           </h1>
           <p className="text-center text-gray-600 mb-8">
-            Hello From AWS!
+            Live On AWS!
           </p>
 
           <div className="h-[600px]">
